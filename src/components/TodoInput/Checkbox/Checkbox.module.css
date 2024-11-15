@@ -1,0 +1,38 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkboxInput {
+  display: none;
+}
+
+.customCheckbox {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 8px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .checkboxInput:checked + .customCheckbox {
+
+} */
+
+.checkboxInput:checked + .customCheckbox::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid #4CAF50;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+

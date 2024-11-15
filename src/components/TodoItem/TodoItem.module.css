@@ -1,0 +1,29 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.completedText {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.todoItem:hover {
+  background-color: #f9f9f9;
+}

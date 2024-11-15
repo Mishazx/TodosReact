@@ -1,0 +1,9 @@
+.paper {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}

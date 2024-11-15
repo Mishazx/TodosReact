@@ -1,0 +1,22 @@
+.button {
+  border: none;
+  background: none; 
+  
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.active {
+  border: 2px solid rgba(175, 47, 47, 0.2);
+}
+
+.button:hover {
+  background: #efefef;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 5;
+}
