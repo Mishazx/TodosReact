@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styles from './Checkbox.module.css';
+import { useTheme } from '../../../context/ThemeContext';
 
 interface CheckboxProps {
   isChecked: boolean;
@@ -8,16 +9,18 @@ interface CheckboxProps {
 }
 
 const Checkbox: FC<CheckboxProps> = ({ isChecked, onChange, label }) => {
+  const { theme } = useTheme();
+
   return (
-    <label className={styles.checkbox}>
+    <label className={`${styles.checkbox} ${styles[theme]}`}>
       <input
         type="checkbox"
         checked={isChecked}
         onChange={onChange}
-        className={styles.checkboxInput}
+        className={`${styles.checkboxInput} ${styles[theme]}`}
         aria-label={label}
       />
-      <span className={styles.customCheckbox} />
+      <span className={`${styles.customCheckbox} ${styles[theme]}`} />
     </label>
   );
 };

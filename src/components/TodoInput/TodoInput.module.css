@@ -17,11 +17,28 @@
   font-size: 24px;
   border: none;
   outline: none;
-  color: #4d4d4d;
-  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
   background-position: 20px center;
   background-repeat: no-repeat;
+}
+
+.input.light {
+  background-color: #fff;
+  color: #4d4d4d;
+  border-bottom: #eee 1px solid;
+}
+
+.input.light:hover {
+  background-color: #f0f0f0;
+}
+
+.input.dark {
+  background-color: #4d4d4d;
+  color: #ccc;
+  border-bottom: #444 1px solid;
+}
+
+.input.dark:hover {
+  background-color: #3a3a3a;
 }
 
 .icon {
@@ -34,7 +51,14 @@
 }
 
 .input::placeholder {
-  color: #d9d9d9;
-  font-weight: 100;
+  font-weight: 200;
   font-style: italic;
+}
+
+.input.light::placeholder {
+  color: #d9d9d9;
+}
+
+.input.dark::placeholder {
+  color: #444;
 }

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import styles from './Paper.module.css';
+import { useTheme } from "../../context/ThemeContext";
 
 interface PaperLeafProps {
   zIndex: number;
@@ -8,8 +9,9 @@ interface PaperLeafProps {
 }
 
 const PaperLeaf: FC<PaperLeafProps> = ({ zIndex, top, left }) => {
+  const { theme } = useTheme();
   return (
-    <div className={styles.paper} style={{ zIndex: zIndex, top: top, left: left}}/>
+    <div className={`${styles.paper} ${styles[theme]}`} style={{ zIndex: zIndex, top: top, left: left}}/>
   );
 };
 

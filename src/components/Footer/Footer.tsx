@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import Button from './Button/Button';
+import { useTheme } from '../../context/ThemeContext';
 
 interface FooterProps {
   count: number;
@@ -10,8 +11,10 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ count, filter, setFilter, clearCompleted }) => {
+  const { theme } = useTheme();
+
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} ${styles[theme]}`}>
       <span className={styles.text}>{count} items left</span>
       <div>
         <Button onClick={() => setFilter('all')} active={filter === 'all'}>

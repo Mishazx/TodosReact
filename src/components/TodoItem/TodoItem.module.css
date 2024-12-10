@@ -2,28 +2,44 @@
   display: flex;
   align-items: center;
   padding: 12px;
-  border-bottom: 1px solid #ddd;
   transition: background-color 0.3s;
 }
 
 .text {
   font-size: 24px;
-  font-weight: 200;
-}
-
-.completed {
-  text-decoration: line-through;
-}
-
-.checkbox {
-  margin-right: 10px;
+  font-weight: 400;
 }
 
 .completedText {
   text-decoration: line-through;
+}
+
+.completedText.light {
   color: #ccc;
+}
+
+.completedText.dark {
+  color: #666;
 }
 
 .todoItem:hover {
   background-color: #f9f9f9;
+}
+
+.todoItem.light {
+  color: #666;
+  border-bottom: 1px solid #ddd;
+}
+
+.todoItem.dark {
+  color: #ccc;
+  border-bottom: 1px solid #333;
+}
+
+.todoItem.light:hover {
+  background-color: #f9f9f9;
+}
+
+.todoItem.dark:hover {
+  background-color: #555;
 }

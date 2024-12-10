@@ -9,14 +9,22 @@
 }
 
 .active {
+  border-radius: 2px;
   border: 2px solid rgba(175, 47, 47, 0.2);
 }
 
-.button:hover {
+.button.light:hover {
   background: #efefef;
 }
 
-.text {
-  font-size: 14px;
-  font-weight: 5;
+.button.dark:hover {
+  background: #333;
+}
+
+.button.light {
+  color: #666;
+}
+
+.button.dark {
+  color: #ddd;
 }
