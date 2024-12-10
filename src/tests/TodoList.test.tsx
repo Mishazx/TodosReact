@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import TodoList from '../components/TodoList/TodoList'; // Adjust the import based on your file structure
+import TodoList from '../components/TodoList/TodoList';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import Todo from '../types/Todo';
@@ -34,18 +34,14 @@ describe('TodoList', () => {
   it('calls toggleTodo when a todo item is clicked', () => {
     renderTodoList(todos);
 
-    // const todoItem1 = screen.getByText('Test Todo 1');
-    // fireEvent.click(todoItem1);
     const checkbox = screen.getByRole('checkbox', { name: 'Test Todo 1' });
     fireEvent.click(checkbox);
-
-    // expect(mockToggleTodo).toHaveBeenCalledWith(1);
   });
 
   it('renders completed todos correctly', () => {
     renderTodoList(todos);
 
     const completedTodo = screen.getByText('Test Todo 2');
-    expect(completedTodo).toHaveClass('completedText'); // Assuming you have a class for completed todos
+    expect(completedTodo).toHaveClass('completedText');
   });
 });
