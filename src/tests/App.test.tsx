@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, Store, UnknownAction } from 'redux';
 import { ThemeProvider } from '../context/ThemeContext'; // Импорт ThemeProvider
 import App from '../App';
 import { clearCompleted } from '../store/todosSlice';
 import rootReducer from '../store/rootReducer';
 import { TodosState } from '../types/Todo';
 
-let store;
+let store: Store<unknown, UnknownAction, unknown>;
 
 describe('App Component', () => {
   beforeEach(() => {
