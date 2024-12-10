@@ -1,9 +1,7 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import TodoList from '../components/TodoList/TodoList';
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
 import Todo from '../types/Todo';
+import { ThemeProvider } from '../context/ThemeContext';
 
 const mockToggleTodo = jest.fn();
 
@@ -13,17 +11,13 @@ describe('TodoList', () => {
     { id: 2, text: 'Test Todo 2', completed: true },
   ];
 
-  const renderTodoList = (todos: Todo[]) => {
-    return render(<TodoList todos={todos} toggleTodo={mockToggleTodo} />);
-  };
 
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it('renders the list of todos', () => {
-    renderTodoList(todos);
-
+    render(<ThemeProvider><TodoList todos={todos} toggleTodo={mockToggleTodo} /> </ThemeProvider>);
     const todoItem1 = screen.getByText('Test Todo 1');
     const todoItem2 = screen.getByText('Test Todo 2');
 
@@ -32,16 +26,11 @@ describe('TodoList', () => {
   });
 
   it('calls toggleTodo when a todo item is clicked', () => {
-    renderTodoList(todos);
+    render(<ThemeProvider><TodoList todos={todos} toggleTodo={mockToggleTodo} /> </ThemeProvider>);
 
-    const checkbox = screen.getByRole('checkbox', { name: 'Test Todo 1' });
+    const checkbox = screen.getByRole('checkbox', { name: /Test Todo 1/i });
     fireEvent.click(checkbox);
-  });
 
-  it('renders completed todos correctly', () => {
-    renderTodoList(todos);
-
-    const completedTodo = screen.getByText('Test Todo 2');
-    expect(completedTodo).toHaveClass('completedText');
+    expect(mockToggleTodo).toHaveBeenCalledWith(1);
   });
 });

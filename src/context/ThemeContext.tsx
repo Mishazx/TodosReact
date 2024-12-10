@@ -5,6 +5,7 @@ type Theme = { id: number; name: 'light' | 'dark' | 'blue' | 'sunny' };
 interface ThemeContextType {
   theme: string;
   themeId: number;
+
   toggleTheme: () => void;
   setThemeById: (index: number) => void;
 }
@@ -25,7 +26,13 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       return parseInt(savedThemeIndex);
     }
 
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = 
+    typeof window !== 'undefined' &&
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+
+    // const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     return prefersDark ? 1 : 0;
   });
 

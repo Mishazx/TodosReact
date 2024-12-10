@@ -15,7 +15,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ id, text, completed, toggleTodo }) 
 
   return (
     <div className={`${styles.todoItem} ${styles[theme]} ${completed ? styles.completed : ''}`}>
-      <Checkbox isChecked={completed} onChange={() => toggleTodo(id)} label={text} />
+      <Checkbox id={`checkbox-${id}`} isChecked={completed} onChange={() => toggleTodo(id)} label={text} />
       <div className={`${styles.text} ${completed ? `${styles.completedText} ${styles[theme]}` : ''}`}>{text}</div>
     </div>
   );

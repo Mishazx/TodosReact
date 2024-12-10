@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore, createAction } from '@reduxjs/toolkit';
 import TodoInput from '../components/TodoInput/TodoInput';
+import { ThemeProvider } from '../context/ThemeContext';
 
 const ADD_TODO = "todos/addTodo";
 
@@ -22,7 +23,9 @@ describe('TodoInput', () => {
   const renderTodoInput = () => {
     return render(
       <Provider store={mockStore}>
-        <TodoInput addTodo={addTodo} />
+        <ThemeProvider>
+          <TodoInput addTodo={addTodo} />
+        </ThemeProvider>
       </Provider>
     );
   };

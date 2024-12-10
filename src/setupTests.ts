@@ -3,3 +3,14 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+beforeAll(() => {
+    global.matchMedia = global.matchMedia || function() {
+      return {
+        matches: false, // or true, depending on the default you want for the tests
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
+      };
+    };
+  });
+  
