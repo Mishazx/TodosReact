@@ -4,7 +4,7 @@ import { useTheme } from '../../../context/ThemeContext';
 
 const DownArrow = () => {
   const { theme } = useTheme();
-  const fillColor = theme === 'light' ? '#d9d9d9' : '#444';
+  const fillColor = theme === 'light' ? '#d9d9d9' : '#555';
 
   return (
     <div className={styles.downArrow}>
