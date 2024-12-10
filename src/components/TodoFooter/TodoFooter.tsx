@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Footer.module.css';
+import styles from './TodoFooter.module.css';
 import Button from './Button/Button';
 import { useTheme } from '../../context/ThemeContext';
 
@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({ count, filter, setFilter, clearComplete
         <Button onClick={() => setFilter('completed')} active={filter === 'completed'}>
           <span className={styles.text}>Completed</span>
         </Button>
-      </div>
+    </div>
       <Button onClick={clearCompleted}>
         <span className={styles.text}> 
           Clear completed

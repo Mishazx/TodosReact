@@ -1,0 +1,171 @@
+.select {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  transition: border-color 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.select:hover {
+  border-color: #666;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+.select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select option {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.select option:hover {
+  background-color: #f0f0f0;
+}
+
+.select option:focus {
+  background-color: #e0e0e0;
+}
+
+.select.light {
+  border-color: #ccc;
+  background-color: white;
+  color: #666;
+}
+
+.select.light:hover {
+  border-color: #666;
+}
+
+.select.light:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+.select.light:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select.light option {
+  background-color: white;
+  color: #666;
+}
+
+.select.light option:hover {
+  background-color: #f0f0f0;
+}
+
+.select.light option:focus {
+  background-color: #e0e0e0;
+}
+
+.select.dark {
+  border-color: #333;
+  background-color: #444;
+  color: #ddd;
+}
+
+.select.dark:hover {
+  border-color: #666;
+}
+
+.select.dark:focus {
+  border-color: #555;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+.select.dark:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select.dark option {
+  background-color: #444;
+  color: #ddd;
+}
+
+.select.dark option:hover {
+  background-color: #555;
+}
+
+.select.dark option:focus {
+  background-color: #666;
+}
+
+.select.blue {
+  border-color: #151515;
+  background-color: #121320;
+  color: #ddd;
+}
+
+.select.blue:hover {
+  border-color: #333;
+}
+
+.select.blue:focus {
+  border-color: #444;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+.select.blue:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select.blue option {
+  background-color: #121320;
+  color: #ddd;
+}
+
+.select.blue option:hover {
+  background-color: #151515;
+}
+
+.select.blue option:focus {
+  background-color: #1a1a1a;
+}
+
+.select.sunny {
+  border-color: #fdd896;
+  background-color: #f8e995;
+  color: #666;
+}
+
+.select.sunny:hover {
+  border-color: #e8a44f;
+}
+
+.select.sunny:focus {
+  border-color: #d48f4f;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+.select.sunny:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select.sunny option {
+  background-color: #f8e995;
+  color: #666;
+}
+
+.select.sunny option:hover {
+  background-color: #e8a44f;
+}
+
+.select.sunny option:focus {
+  background-color: #d48f4f;
+}

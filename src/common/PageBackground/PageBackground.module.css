@@ -11,8 +11,18 @@
     background-color: #dddddd;
     color: #333;
   }
-  
+
   .pageBackground.dark {
     background-color: #333;
     color: #dddddd;
+  }
+  
+  .pageBackground.blue {
+    background-color: #121320;
+    color: #dddddd;
+  }
+
+  .pageBackground.sunny {
+    background-color: #f2d695;
+    color: #333;
   }

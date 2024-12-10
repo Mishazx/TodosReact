@@ -19,6 +19,7 @@
   outline: none;
   background-position: 20px center;
   background-repeat: no-repeat;
+
 }
 
 .input.light {
@@ -27,18 +28,34 @@
   border-bottom: #eee 1px solid;
 }
 
-.input.light:hover {
-  background-color: #f0f0f0;
-}
-
 .input.dark {
   background-color: #4d4d4d;
   color: #ccc;
   border-bottom: #444 1px solid;
 }
 
+.input.blue {
+  background-color: #0a0414;
+  color: #ccc;
+  border-bottom: #444 1px solid;
+}
+
+.input.sunny {
+  background-color: #f8e995;
+  color: #4d4d4d;
+  border-bottom: #fdd896 1px solid;
+}
+
+.input.light:hover {
+  background-color: #f1f1f1;
+}
+
 .input.dark:hover {
   background-color: #3a3a3a;
+}
+
+.input.blue:hover {
+  background-color: #160730;
 }
 
 .icon {
@@ -60,5 +77,9 @@
 }
 
 .input.dark::placeholder {
+  color: #444;
+}
+
+.input.blue::placeholder {
   color: #444;
 }

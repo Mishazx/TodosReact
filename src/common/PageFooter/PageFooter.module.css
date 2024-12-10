@@ -1,9 +1,40 @@
-.footer {
+.pageFooter {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #f1f1f1;
-  color: #333;
+  align-items: center;
+  gap: 1rem;
   position: relative;
   margin-top: auto;
+  height: 50px;
+}
+
+.pageFooter.light {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.pageFooter.dark {
+  background-color: #444;
+  color: #f1f1f1;
+}
+
+.pageFooter.blue {
+  border-top: 1px solid #151515;
+  background-color: #131230;
+  color: #f1f1f1;
+}
+
+.pageFooter.sunny {
+  border-top: 1px solid #fdd896;
+  background-color: #f8e995;
+  color: #333;
+}
+
+.leftBlock {
+  flex: 1;
+}
+
+.rightBlock {
+  padding-right: 12px;
 }
