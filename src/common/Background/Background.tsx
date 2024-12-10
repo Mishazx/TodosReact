@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import Paper from '../../components/Paper/Paper';
+import Paper from '../Paper/Paper';
 import styles from './Background.module.css';
 import Title from '../Title/Title';
 

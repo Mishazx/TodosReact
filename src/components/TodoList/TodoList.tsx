@@ -1,9 +1,10 @@
 import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 import styles from './TodoList.module.css';
+import Todo from '../../types/Todo';
 
 interface TodoListProps {
-  todos: { id: number; text: string; completed: boolean }[];
+  todos: Todo[];
   toggleTodo: (id: number) => void;
 }
 

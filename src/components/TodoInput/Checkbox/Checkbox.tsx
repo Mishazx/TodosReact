@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
-import styles from './Checkbox.module.css'; // Импортируйте CSS-модуль
+import styles from './Checkbox.module.css';
 
 interface CheckboxProps {
   isChecked: boolean;
   onChange: () => void;
+  label: string;
 }
 
-const Checkbox: FC<CheckboxProps> = ({ isChecked, onChange }) => {
+const Checkbox: FC<CheckboxProps> = ({ isChecked, onChange, label }) => {
   return (
     <label className={styles.checkbox}>
       <input
@@ -14,8 +15,9 @@ const Checkbox: FC<CheckboxProps> = ({ isChecked, onChange }) => {
         checked={isChecked}
         onChange={onChange}
         className={styles.checkboxInput}
+        aria-label={label}
       />
-      <span className={styles.customCheckbox}></span>
+      <span className={styles.customCheckbox} />
     </label>
   );
 };

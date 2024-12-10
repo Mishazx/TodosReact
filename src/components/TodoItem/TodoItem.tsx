@@ -9,11 +9,13 @@ interface TodoItemProps {
   toggleTodo: (id: number) => void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ id, text, completed, toggleTodo }) => (
-  <div className={`${styles.todoItem} ${completed ? styles.completed : ''}`}>
-    <Checkbox isChecked={completed} onChange={() => toggleTodo(id)} />
-    <div className={`${styles.text} ${completed ? styles.completedText : ''}`}>{text}</div>
-  </div>
-);
+const TodoItem: React.FC<TodoItemProps> = ({ id, text, completed, toggleTodo }) => {
+  return (
+    <div className={`${styles.todoItem} ${completed ? styles.completed : ''}`}>
+      <Checkbox isChecked={completed} onChange={() => toggleTodo(id)} label={text} />
+      <div className={`${styles.text} ${completed ? styles.completedText : ''}`}>{text}</div>
+    </div>
+  );
+};
 
 export default TodoItem;
